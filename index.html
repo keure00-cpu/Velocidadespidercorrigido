@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Velocity Spider — HQ Digital</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}body{background:#020812;color:#eaf8ff;font-family:Arial,sans-serif}
+header{border-bottom:1px solid #174a67}.banner{height:170px;background:linear-gradient(90deg,#020711eF,#02071155),url("assets/header.jpg") center/cover;position:relative}.logo{position:absolute;left:28px;top:24px;font-size:36px;font-weight:900;font-style:italic;line-height:.88;text-shadow:0 0 10px #00cfff}.logo span{color:#00dfff}.logo small{display:block;font-size:9px;letter-spacing:4px;margin-top:12px;color:#9ceeff}.banner-info{position:absolute;right:30px;top:28px;width:290px}.banner-info b{color:#00dfff}.banner-info h1{font-size:27px;margin:4px 0}.banner-info p{color:#c7d9e5;line-height:1.4}nav{height:55px;display:flex;justify-content:center;background:#020a14;overflow:auto}nav button{border:0;background:transparent;color:#c9d8e3;padding:0 22px;cursor:pointer;font-weight:bold}nav button.active{color:#fff;border-bottom:3px solid #00eaff}.layout{max-width:1550px;margin:auto;padding:12px;display:grid;grid-template-columns:260px 1fr 290px;gap:12px}.panel{background:linear-gradient(145deg,#081b2e,#020b15);border:1px solid #164c69;border-radius:10px;overflow:hidden}.title{padding:14px;font-weight:bold;border-bottom:1px solid #12374e}.chapter-list{padding:8px}.chapter{display:flex;gap:9px;padding:8px;border-radius:7px;cursor:pointer;margin-bottom:4px}.chapter.active{background:linear-gradient(90deg,#0874e7,#0754ae)}.chapter img{width:55px;height:55px;object-fit:cover;border-radius:5px}.chapter-info{font-size:12px}.chapter-info b{display:block;margin-bottom:5px}.sagas{margin-top:12px}.saga{margin:7px 12px;padding:9px;background:#071a2d;border-radius:6px;font-size:12px}.reader{padding:10px}.toolbar{display:flex;justify-content:space-between;align-items:center;padding:8px}.toolbar button,.control button{background:#071a2c;color:#fff;border:1px solid #174b69;border-radius:6px;padding:8px 12px;cursor:pointer}.label{border:1px solid #00dfff;border-radius:20px;padding:8px 20px}.comic{background:#010409;border:1px solid #00aede;display:flex;justify-content:center;min-height:500px;overflow:auto}.comic img{width:100%;max-height:760px;object-fit:contain}.control{display:flex;justify-content:space-between;align-items:center;padding:8px}.thumbs{display:flex;gap:7px;overflow:auto;margin-top:8px;padding:8px;background:#020b16;border:1px solid #164c69;border-radius:8px}.thumb{flex:0 0 70px;height:88px;border:2px solid transparent;border-radius:5px;overflow:hidden;cursor:pointer;position:relative}.thumb img{width:100%;height:100%;object-fit:cover}.thumb span{position:absolute;bottom:0;left:0;right:0;text-align:center;background:#000B;padding:3px;font-size:11px}.thumb.active{border-color:#00eaff;box-shadow:0 0 12px #00bfff}.cover{padding:10px}.cover img{width:100%;border-radius:7px}.details{padding:12px}.details .cyan{color:#00dfff;font-size:13px}.details h2{margin:4px 0 10px}.progress{height:8px;background:#071a2c;border-radius:9px;overflow:hidden}.bar{height:100%;background:linear-gradient(90deg,#008cff,#00eaff)}.next{width:100%;margin-top:12px;padding:12px;border:0;border-radius:7px;background:#009cf3;color:#fff;font-weight:bold;cursor:pointer}.grid{padding:12px;display:grid;grid-template-columns:repeat(5,1fr);gap:7px}.grid button{height:38px;background:#061525;color:#dff5ff;border:1px solid #17405d;border-radius:5px;cursor:pointer}.grid button.active{background:#008ff1;border-color:#00eaff}.legend{padding:12px;font-size:12px}.legend div{margin:9px 0}.quote{margin:10px;padding:20px;text-align:center;min-height:140px;border-radius:8px;background:linear-gradient(#020914CC,#020914DD),url("assets/capa.jpg") center/cover;font-style:italic;line-height:1.5}.error{display:none;align-items:center;justify-content:center;text-align:center;padding:25px;color:#9ceeff}.error strong{display:block;margin-top:8px;color:#fff}@media(max-width:1150px){.layout{grid-template-columns:220px 1fr}.right{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:10px}}@media(max-width:800px){.layout{display:block}.left,.right{margin-bottom:10px}.chapter-list{display:flex;overflow:auto}.chapter{min-width:210px}.right{display:block}.banner-info{display:none}.logo{font-size:26px}nav{justify-content:flex-start}}
+</style>
+</head>
+<body>
+<header>
+<div class="banner">
+<div class="logo">VELOCITY<br><span>SPIDER</span><small>MAIS RÁPIDO QUE O TEMPO</small></div>
+<div class="banner-info"><b>CAPÍTULO 01</b><h1>O DESPERTAR</h1><p>Tudo começou com um acidente... mas o que parecia o fim, foi apenas o começo.</p></div>
+</div>
+<nav><button>INÍCIO</button><button class="active">HQ</button><button>PERSONAGEM</button><button>PODERES</button><button>CAPÍTULOS</button><button>SOBRE</button></nav>
+</header>
+
+<main class="layout">
+<aside class="left">
+<section class="panel"><div class="title">CAPÍTULOS</div><div class="chapter-list" id="chapters"></div></section>
+<section class="panel sagas"><div class="title">SAGAS</div><div class="saga">🕷️ Saga do Despertar (1–5)</div><div class="saga">🌃 Saga da Cidade (6–10)</div><div class="saga">🔥 Saga da Conspiração (11–15)</div></section>
+</aside>
+
+<section>
+<div class="panel reader">
+<div class="toolbar"><button onclick="prev()">‹ Página anterior</button><div class="label" id="label">Página 1 de 15</div><button onclick="next()">Próxima página ›</button></div>
+<div class="comic"><img id="page" src="assets/hq/page-001.jpg" alt="HQ"><div class="error" id="error"><div><b>Imagem não encontrada</b><strong id="missing"></strong><p style="margin-top:10px;color:#7893aa;font-size:12px">O leitor procura JPG, JPEG, PNG e WEBP em várias pastas automaticamente.</p></div></div></div>
+<div class="control"><div>⤨ Página aleatória</div><div><input id="input" type="number" min="1" max="15" value="1" style="width:45px;padding:8px;background:#020a13;color:white;border:1px solid #174b69;border-radius:5px"><button onclick="go()">Ir para</button></div><div><button onclick="zoom(-10)">−</button> <span id="zoom">100%</span> <button onclick="zoom(10)">+</button> <button onclick="full()">⛶</button></div></div>
+</div>
+<div class="thumbs" id="thumbs"></div>
+</section>
+
+<aside class="right">
+<section class="panel"><div class="cover"><img src="assets/capa.jpg"></div><div class="details"><div class="cyan">CAPÍTULO 01</div><h2>O Despertar</h2><div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:5px"><span>15 páginas</span><span id="pct">7%</span></div><div class="progress"><div class="bar" id="bar" style="width:7%"></div></div><button class="next" onclick="next()">Ler próxima página →</button></div></section>
+<section class="panel"><div class="title">PÁGINAS DESTE CAPÍTULO</div><div class="grid" id="grid"></div></section>
+<section class="panel"><div class="title">LEGENDA</div><div class="legend"><div>💬 Fala do personagem</div><div>📖 Narrador</div><div>💭 Pensamento</div><div>⚡ Ação / Movimento</div><div>🌙 Cena noturna</div><div>☀️ Cena de dia</div></div></section>
+<div class="quote">“O verdadeiro poder não está na velocidade... mas na vontade de proteger o que importa.”<br><br>— VELOCITY SPIDER</div>
+</aside>
+</main>
+
+<script>
+const TOTAL=15;let current=1,scale=100;
+const names=["O Despertar","A Cidade em Choque","O Novo Inimigo","A Conspiração","O Laboratório Secreto","A Caçada","O Herói em Dúvida","A Fúria de Maximus","O Mundo Descobre","A Grande Batalha","O Exército de Vorax","A Cidade Invertida","O Segundo Kai","Queda Livre","O Coração da Máquina"];
+const page=document.getElementById("page"),error=document.getElementById("error");
+
+function candidates(n){
+ const x=String(n).padStart(3,"0");
+ const y=String(n);
+ return [
+   `assets/hq/page-${x}.jpg`,
+   `assets/hq/page-${x}.jpeg`,
+   `assets/hq/page-${x}.png`,
+   `assets/hq/page-${x}.webp`,
+   `assets/hq/pagina${x}.jpg`,
+   `assets/hq/pagina${x}.jpeg`,
+   `assets/hq/pagina${x}.png`,
+   `assets/hq/pagina${x}.webp`,
+   `assets/hq/pagina-${x}.jpg`,
+   `assets/hq/pagina-${x}.png`,
+   `assets/page-${x}.jpg`,
+   `assets/page-${x}.png`,
+   `assets/pagina${x}.jpg`,
+   `assets/pagina${x}.png`,
+   `assets/${x}.jpg`,
+   `assets/${x}.png`,
+   `page-${x}.jpg`,
+   `page-${x}.png`,
+   `pagina${x}.jpg`,
+   `pagina${x}.png`,
+   `pagina${y}.jpg`,
+   `pagina${y}.png`
+ ];
+}
+
+function findImage(n, done){
+ const list=candidates(n);
+ let i=0;
+ function test(){
+   if(i>=list.length){ done(null); return; }
+   const url=list[i++];
+   const probe=new Image();
+   probe.onload=()=>done(url);
+   probe.onerror=test;
+   probe.src=url+"?v="+Date.now();
+ }
+ test();
+}
+
+function render(){
+ document.getElementById("label").textContent=`Página ${current} de ${TOTAL}`;
+ document.getElementById("input").value=current;
+ const p=Math.round(current/TOTAL*100);
+ document.getElementById("pct").textContent=p+"%";
+ document.getElementById("bar").style.width=p+"%";
+ document.querySelectorAll("#grid button").forEach((b,i)=>b.classList.toggle("active",i+1===current));
+ document.querySelectorAll(".thumb").forEach((b,i)=>b.classList.toggle("active",i+1===current));
+
+ page.style.display="none";
+ error.style.display="none";
+
+ findImage(current,(url)=>{
+   if(url){
+     page.onload=()=>{page.style.display="block"};
+     page.src=url;
+   }else{
+     document.getElementById("missing").innerHTML =
+       "Página "+current+" não encontrada.<br><small>"+
+       "Use assets/hq/page-"+String(current).padStart(3,"0")+
+       ".jpg (ou .png/.webp).</small>";
+     error.style.display="flex";
+   }
+ });
+}
+
+function next(){if(current<TOTAL){current++;render()}}
+function prev(){if(current>1){current--;render()}}
+function go(){
+ const n=Number(document.getElementById("input").value);
+ if(n>=1&&n<=TOTAL){current=n;render()}
+}
+function zoom(v){
+ scale=Math.max(50,Math.min(180,scale+v));
+ page.style.width=scale+"%";
+ document.getElementById("zoom").textContent=scale+"%";
+}
+function full(){document.querySelector(".comic").requestFullscreen?.()}
+
+for(let i=1;i<=TOTAL;i++){
+ let b=document.createElement("button");
+ b.textContent=i;
+ b.onclick=()=>{current=i;render()};
+ document.getElementById("grid").appendChild(b);
+
+ let t=document.createElement("div");
+ t.className="thumb";
+ let im=document.createElement("img");
+ im.alt="Página "+i;
+ findImage(i,(url)=>{im.src=url||"assets/capa.jpg"});
+ t.appendChild(im);
+ let s=document.createElement("span");
+ s.textContent=i;
+ t.appendChild(s);
+ t.onclick=()=>{current=i;render()};
+ document.getElementById("thumbs").appendChild(t);
+}
+
+names.forEach((name,i)=>{
+ let d=document.createElement("div");
+ d.className="chapter"+(i===0?" active":"");
+ let im=document.createElement("img");
+ im.alt="Capítulo "+(i+1);
+ findImage(i+1,(url)=>{im.src=url||"assets/capa.jpg"});
+ d.appendChild(im);
+ let info=document.createElement("div");
+ info.className="chapter-info";
+ info.innerHTML=`<b>Capítulo ${String(i+1).padStart(2,"0")}</b>${name}<br><small>15 páginas</small>`;
+ d.appendChild(info);
+ d.onclick=()=>{
+   document.querySelectorAll(".chapter").forEach(x=>x.classList.remove("active"));
+   d.classList.add("active");
+   current=1;
+   render();
+ };
+ document.getElementById("chapters").appendChild(d);
+});
+
+document.addEventListener("keydown",e=>{
+ if(e.key==="ArrowRight")next();
+ if(e.key==="ArrowLeft")prev();
+});
+
+render();
+</script>
+</body>
+</html>
